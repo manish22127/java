@@ -1,0 +1,55 @@
+[11:08 am, 01/06/2021] Dr. Prashanth Sir RVCE: package inheritance;
+
+class Person{
+
+	String name,address,emailid;
+	int phoneno;
+	Person(){
+		System.out.println("default constructor");
+	}
+	Person(String name, String address, String emailid){
+		this.name = name;
+		this.address = address;
+		this.emailid = emailid;
+	}
+	void display(){
+		System.out.println("Person Employes name ="+name);
+		System.out.println("Employee addres ="+address);
+		System.out.println("Person Employee emailid ="+emailid);
+	}
+}
+[11:08 am, 01/06/2021] Dr. Prashanth Sir RVCE: package inheritance;
+
+public class Employee extends Person{
+
+        String company,empid;
+
+        Employee(String name, String address, String emailid,String company, String empid){
+                super(name,address,emailid);
+		this.name=name;
+		this.address = address;
+		this.emailid = emailid;
+		super.display();
+		this.company = company;
+                this.empid = empid;
+        }
+       /* void display(){
+               System.out.println("Employee name ="+super.name);
+               System.out.println("Employee addres ="+super.address);
+               System.out.println("Employee emailid ="+super.emailid);
+//		super.display();
+		System.out.println("Employee company = "+company);
+		System.out.println("Employee empid = "+empid);
+			
+        }*/
+	public static void main(String args[]){
+		Employee e = new Employee("xyz","kengeri","xyz@rvce.edu.in","rvce","rv123");
+//		Employee e1 = new Employee("abc","bannerghatta","abc@rvce.edu.in","rvce","rvce1234");
+		Person p = (Person)e;
+		p.display();
+	//	System.out.println(Examp_Array.hello());
+	//	e.display();
+	//	e1.display();
+
+	}
+}
