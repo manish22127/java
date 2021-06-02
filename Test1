@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+class Test1{
+	public static void main(String args[]) {//jvm
+		Test1 t = new Test1();
+		System.out.println(Test.a);
+		Test.method1(10, 20);
+		Scanner sc = new Scanner(System.in);
+		sc.nextLine();
+	}
+}
+
+public class Test {
+	static int a;
+	static String collegename, address;//static instance variables
+	static{ //static block
+		collegename = "RVCE";
+		address ="kengeri";
+		Test.a=10;
+		System.out.println("this is a static block");
+	}
+	
+	Test(int a, int b){
+		System.out.println("this is a constructor block "+ collegename+" "+address);
+		System.out.println("this is a constructor block"+ a+" "+b);
+	}
+		
+	static int method1(int a,int b) {
+		System.out.println(" in the static method");
+		int calc = Test.a*a;
+		return calc;
+	}
+			
+	public static void main(String args[]) {//jvm
+		Test t = new Test(20,30);
+		System.out.println(Test.a);
+		Scanner sc = new Scanner(System.in);
+		t.a = sc.nextInt();
+		System.out.println(" in the static method"+t.a);
+		Test t2 = new Test(20,30);
+		System.out.println(" in the static method"+t2.a);
+		
+	}
+}
