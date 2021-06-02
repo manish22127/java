@@ -1,0 +1,47 @@
+[10:46 am, 01/06/2021] Dr. Prashanth Sir RVCE: package inheritance;
+
+public class A{
+	int i=20;
+	void fun(){
+		System.out.println("fun version of A");
+	}
+	A(){
+		System.out.println("Constructor of A");
+	}
+	A(int a){
+		System.out.println("Constructor of A-"+a);
+	}
+}
+class B extends A{
+	B(){
+		System.out.println("constructor of B");
+		}
+	
+	public static void main(String args[]){
+		B b = new B();
+		b.fun();
+	}
+}
+[11:06 am, 01/06/2021] Dr. Prashanth Sir RVCE: package inheritance;
+
+class B{
+	B(int a){
+		System.out.println("constructor in B");
+	}
+	void fun() {
+		System.out.println("inside the method b");
+	}	
+}
+
+public class A extends B{
+	A(int a){
+		super(a);
+		System.out.println("constructor in A");
+	}
+	void fun1() {}
+	public static void main(String args[]) {
+		A a = new A(10);
+		a.fun();
+	}
+ 
+}
