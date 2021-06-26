@@ -1,0 +1,62 @@
+[10:37 am, 24/06/2021] Dr. Prashanth Sir RVCE: public class Throws_example {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Throws_example te = new Throws_example();
+		try {
+		te.Arithe_examp();
+		}catch(ArithmeticException e) {
+			System.out.println("in arithmeticexception");
+		}catch(NullPointerException e) {
+			System.out.println("in nullpointerexception");
+		}
+		System.out.println("after method call");
+	}
+	
+	public void Arithe_examp() throws ArithmeticException,NullPointerException{
+		this.Null_example();
+		int a =0,b=10;
+		int c = b/a;
+		
+	}
+	
+	public void Null_example() throws NullPointerException{
+		String s = null;
+		s.length();
+	}
+
+}
+[10:49 am, 24/06/2021] Dr. Prashanth Sir RVCE: public class Throws_example {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Throws_example te = new Throws_example();
+		try {
+		te.Arithe_examp(0,20,null);
+		}catch(ArithmeticException e) {
+			System.out.println("in arithmeticexception");
+		}catch(NullPointerException e) {			
+			System.out.println("in nullpointerexception");
+			try {
+			te.Arithe_examp(0,20,"rvce");
+			}catch(Exception e1) {
+				System.out.println("more in exception exception");
+			}
+		}catch(Exception e) {
+			
+		}
+		System.out.println("after method call");
+	}
+	
+	public void Arithe_examp(int a,int b,String name) throws NullPointerException,ArithmeticException{
+		this.Null_example(name);
+		int c = b/a;
+		System.out.println("after Arithe_examp call"+c );
+	}
+	
+	public void Null_example(String name) throws NullPointerException{
+		name.length();
+		System.out.println("after Null_example call"+name);
+	}
+
+}
