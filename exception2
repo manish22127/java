@@ -1,0 +1,87 @@
+ public class Throws_example {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Throws_example te = new Throws_example();
+		int[] a = new int[2]; //version 1.5 - c prog - generic
+		
+		
+		try {
+		te.Arithe_examp(20,20,"rvce");
+		int a1=a[3];
+		}catch(ArithmeticException e) {
+			System.out.println("in arithmeticexception");
+		}catch(NullPointerException e) {			
+			System.out.println("in nullpointerexception");
+			try {
+			te.Arithe_examp(0,20,"rvce");
+			}catch(Exception e1) {
+				System.out.println("more in exception exception");
+			}
+		}catch(ArrayIndexOutOfBoundsException e) {
+			System.out.println("array index exception");
+		}
+		System.out.println("after method call");
+	}
+	
+	public void Arithe_examp(int a,int b,String name) throws NullPointerException,ArithmeticException{
+		this.Null_example(name);
+		int c = b/a;
+		System.out.println("after Arithe_examp call"+c );
+	}
+	
+	public void Null_example(String name) throws NullPointerException{
+		name.length();
+		System.out.println("after Null_example call"+name);
+	}
+
+}
+
+
+
+import java.io.File;
+import java.io.FileNotFoundException;
+
+public class Throws_example {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Throws_example te = new Throws_example();
+		int[] a = new int[2]; //version 1.5 - c prog - generic
+		File f;
+		try {
+			
+			f = new File("Test.java");
+			System.out.println(f.length());
+			System.out.println(f.canRead());
+			//throw new NullPointerException();
+//		te.Arithe_examp(20,20,"rvce");
+//		int a1=a[3];
+		}catch(ArithmeticException e) {
+			System.out.println("in arithmeticexception");
+		}catch(NullPointerException e) {			
+			System.out.println("in nullpointerexception");
+		}catch(ArrayIndexOutOfBoundsException e) {
+			System.out.println("array index exception");
+		}finally{
+			f=nu…
+
+
+
+class MyException extends Exception{
+	MyException(String string){
+		System.out.println("you got an exception "+string);
+	}
+}
+
+public class Gen_Exception {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try {
+			throw new MyException("error");
+		}catch(MyException me) {
+			me.printStackTrace();
+		}
+	}
+}
