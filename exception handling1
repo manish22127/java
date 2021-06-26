@@ -1,4 +1,4 @@
-[10:37 am, 24/06/2021] Dr. Prashanth Sir RVCE: public class Throws_example {
+public class Throws_example {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -26,7 +26,7 @@
 	}
 
 }
-[10:49 am, 24/06/2021] Dr. Prashanth Sir RVCE: public class Throws_example {
+ public class Throws_example {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
